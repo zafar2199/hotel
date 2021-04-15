@@ -39,7 +39,7 @@ $fontnunito:'Nunito', sans-serif;
     font-family: $font1;
     color: $textcolor2;
     padding:11px 25px;
-    max-height: 44px;
+    // max-height: 44px;
     text-align: center;
     border-radius: 3px;
     border: 1px solid $maincolor;
@@ -110,7 +110,7 @@ $fontnunito:'Nunito', sans-serif;
     }
     .card-content{
         background-color: $maincolor2;
-        height: 250px;
+        // height: 250px;
         font-family: $font1;
         color: $textcolor2;
         padding: 10px 20px 34px 20px;
@@ -159,6 +159,12 @@ $fontnunito:'Nunito', sans-serif;
 
         }
     }
+}
+
+%background-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -346,13 +352,11 @@ section{
         .menyu-a{
             display: flex;
             justify-content: space-between;
-            .icon-nav{
-                cursor: pointer;
-                display: none;
-            }
+          
             a{
                 color: $textcolor2;
                 font-family: $font1;
+                font-size: 16px;
                 font-weight: 700;
                 position: relative;
                 &::after{
@@ -382,6 +386,37 @@ section{
 }
 // menyu exit 
   
+// phone menyu 
+
+.menyu-phone{
+    top: -100vh;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 15% 0;
+    background-color: $maincolor2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 99;
+    transition: all  .5s ease;
+    .cancel-btn{
+        top: 4%;
+        right: 5%;
+        position: absolute;
+        i{
+            color: $textcolor2;
+        }  
+    }
+    a{
+        color: $textcolor2;
+        font-family: $font1;
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+    }
+}
 
     
 
@@ -755,7 +790,7 @@ section{
         display: flex;
         .img-blok-1-left{
             width:50% ;
-            height: 500px;
+            // height: 500px;
             background-image: url(../images/img-block-1.png);
             background-size: cover;
             background-repeat: no-repeat;
@@ -851,7 +886,7 @@ section{
         }
         .card-content{
             background-color: $maincolor2;
-            height: 250px;
+            // height: 250px;
             font-family: $font1;
             color: $textcolor2;
             padding: 10px 20px 34px 20px;
@@ -1063,7 +1098,7 @@ section{
     display: flex;
     justify-content: space-between;
     .bottom-card{
-         width: 255px;
+         width: 21%;
          height: 255px;
          background:linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card1.png);
          background-size: cover;
@@ -1090,12 +1125,26 @@ section{
     }
     .bottom-card2{
         background:linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+       
+
     }
     .bottom-card3{
         background:linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
     }
     .bottom-card4{
         background:linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card4.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
     }
 }
 
@@ -1290,7 +1339,7 @@ section{
 }
 
 
-@media(max-width:576px){
+@media(max-width:768px){
     section{
         .navtop{
             .nav-top-content{
@@ -1336,8 +1385,40 @@ section{
         }
         // menyu 
         
+        .menyu{
+            .menyu-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .logo-menyu{
+                    display: block;
+                    font-family: $font2;
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: $textcolor2;
+                    span{
+                        color:$maincolor;
+                    }
+                }
+
+                .menyu-a{
+                    display: none;
+                }
+
+                .menu-btn{
+                    display: block;
+                    i{
+                        color: $textcolor2;
+                    }
+                }
+                }
+             
+            }
+           
+          
+        }
         // menyu end 
-    }
+    
 
 //  hotel-title 
     .hotel-title{
@@ -1574,6 +1655,9 @@ section{
     .card-blok{
         flex-direction: column;
         align-items: center;
+        .bottom-card{
+            width: 90%;
+        }
     }
 
     // footer 
@@ -1646,13 +1730,9 @@ section{
 
 
 
-@media(max-width:998px){
+@media(max-width:1200px){
     .container{
         width: 90%;
         margin: 0 auto;
     }
 }
-
-
-
-

@@ -29,7 +29,6 @@ section .navtop .nav-top-content .navtop-text, section .navtop .nav-top-content 
   font-family: "Mulish", sans-serif;
   color: #fff;
   padding: 11px 25px;
-  max-height: 44px;
   text-align: center;
   border-radius: 3px;
   border: 1px solid #EC1F46;
@@ -111,7 +110,6 @@ section .navtop .nav-top-content .navtop-text, section .navtop .nav-top-content 
 
 .tri-card .img-blok-2 .card-content {
   background-color: #0A223D;
-  height: 250px;
   font-family: "Mulish", sans-serif;
   color: #fff;
   padding: 10px 20px 34px 20px;
@@ -423,14 +421,10 @@ section .menyu .menyu-content .menyu-a {
           justify-content: space-between;
 }
 
-section .menyu .menyu-content .menyu-a .icon-nav {
-  cursor: pointer;
-  display: none;
-}
-
 section .menyu .menyu-content .menyu-a a {
   color: #fff;
   font-family: "Mulish", sans-serif;
+  font-size: 16px;
   font-weight: 700;
   position: relative;
 }
@@ -454,6 +448,48 @@ section .menyu .menyu-content .menyu-a a:hover::after {
 
 section .menyu .menyu-content .menu-btn {
   display: none;
+}
+
+section .menyu-phone {
+  top: -100vh;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  padding: 15% 0;
+  background-color: #0A223D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 99;
+  -webkit-transition: all  .5s ease;
+  transition: all  .5s ease;
+}
+
+section .menyu-phone .cancel-btn {
+  top: 4%;
+  right: 5%;
+  position: absolute;
+}
+
+section .menyu-phone .cancel-btn i {
+  color: #fff;
+}
+
+section .menyu-phone a {
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
 }
 
 .bread .breadcrumb {
@@ -908,7 +944,6 @@ section .menyu .menyu-content .menu-btn {
 
 .img-blok .img-blok-1 .img-blok-1-left {
   width: 50%;
-  height: 500px;
   background-image: url(../images/img-block-1.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1022,7 +1057,6 @@ section .menyu .menyu-content .menu-btn {
 
 .img-blok .img-blok-2 .card-content {
   background-color: #0A223D;
-  height: 250px;
   font-family: "Mulish", sans-serif;
   color: #fff;
   padding: 10px 20px 34px 20px;
@@ -1280,7 +1314,7 @@ section .menyu .menyu-content .menu-btn {
 }
 
 .card-blok .bottom-card {
-  width: 255px;
+  width: 21%;
   height: 255px;
   background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card1.png);
   background-size: cover;
@@ -1316,14 +1350,23 @@ section .menyu .menyu-content .menu-btn {
 
 .card-blok .bottom-card2 {
   background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-blok .bottom-card3 {
   background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-blok .bottom-card4 {
   background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%), url(../images/bootom-card4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer {
@@ -1569,7 +1612,7 @@ section .menyu .menyu-content .menu-btn {
   width: 60px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   section .navtop .nav-top-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1624,6 +1667,36 @@ section .menyu .menyu-content .menu-btn {
   }
   section .nav-search-bg .nav-search .nav-search-right .dropdown {
     width: 50%;
+  }
+  section .menyu .menyu-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .menyu .menyu-content .logo-menyu {
+    display: block;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+  }
+  section .menyu .menyu-content .logo-menyu span {
+    color: #EC1F46;
+  }
+  section .menyu .menyu-content .menyu-a {
+    display: none;
+  }
+  section .menyu .menyu-content .menu-btn {
+    display: block;
+  }
+  section .menyu .menyu-content .menu-btn i {
+    color: #fff;
   }
   .hotel-title .hotel-title-left .hotel-name a {
     padding: 9px;
@@ -1845,6 +1918,9 @@ section .menyu .menyu-content .menu-btn {
         -ms-flex-align: center;
             align-items: center;
   }
+  .card-blok .bottom-card {
+    width: 90%;
+  }
   .footer {
     padding: 50px 0;
   }
@@ -1887,7 +1963,7 @@ section .menyu .menyu-content .menu-btn {
   }
 }
 
-@media (max-width: 998px) {
+@media (max-width: 1200px) {
   .container {
     width: 90%;
     margin: 0 auto;
